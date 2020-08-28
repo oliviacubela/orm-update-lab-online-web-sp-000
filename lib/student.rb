@@ -9,7 +9,7 @@ class Student
     @name = name
     @grade = grade
   end
- 
+
   def self.create_table
     sql = <<-SQL
       CREATE TABLE IF NOT EXISTS students (
@@ -58,7 +58,7 @@ class Student
       WHERE name = ?
       LIMIT 1
     SQL
- 
+
     DB[:conn].execute(sql,name).map do |row|
       self.new_from_db(row)
     end.first
@@ -69,8 +69,3 @@ class Student
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
 end
-
-
-
-
-
