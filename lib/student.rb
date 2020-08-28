@@ -50,7 +50,6 @@ class Student
     sql = <<-SQL
     DROP TABLE students
     SQL
->>>>>>> 8fb37e05f4ff4bdac5109490b0d5efa12660772e
     DB[:conn].execute(sql)
   end
 
