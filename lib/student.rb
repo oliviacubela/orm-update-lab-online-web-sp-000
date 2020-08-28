@@ -55,7 +55,6 @@ class Student
   end
 
   def save
-<<<<<<< HEAD
     if self.id
       self.update
     else
@@ -91,7 +90,7 @@ class Student
     DB[:conn].execute(sql,name).map do |row|
       self.new_from_db(row)
     end.first
-=======
+    
     sql = <<-SQL
       INSERT INTO students (name, grade)
       VALUES (?, ?)
